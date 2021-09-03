@@ -1,5 +1,5 @@
 import React from 'react'
-import BooksCard from '../../../components/Card/Card'
+import BooksCard from '../../../components/BooksCard/BooksCard'
 
 import IBooks from '../../../interfaces/books'
 

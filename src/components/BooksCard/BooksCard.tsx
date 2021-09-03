@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router';
 import { Card, Button, Image, Row, Col } from 'react-bootstrap';
 import IBooks from '../../interfaces/books';
 
@@ -6,11 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faQuoteLeft, faBookOpen, faExclamationCircle, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
-import './Card.css';
+import './BooksCard.css';
 
 import bookIcon from "../../assets/icons/book.png";
 
 function BooksCard (props: IBooks){
+    const history = useHistory();
+
     return (
         <>
             <Card key={props._id} className="mx-2 bat-catalog-card shadow p-3 mb-5 bg-white border-0" >
@@ -48,7 +51,7 @@ function BooksCard (props: IBooks){
                     </Col>
                     </Row>
                     <div>
-                        <Button variant="outline-info" size="sm" className="m-2">
+                        <Button variant="outline-info" size="sm" className="m-2" onClick={()=>history.push('/viewbook/'+props._id)}>
                             <FontAwesomeIcon icon={faBookOpen}/> Read More
                         </Button>
                         <Button variant="success" size="sm" className="m-2 text-white" >

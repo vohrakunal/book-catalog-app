@@ -1,0 +1,12 @@
+.bat-loader-pos{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #d2d1ff4f;
+}
+
+.bat-loader-spinners{
+    position: fixed;
+    top:47%;
+    left: 46%;
+}
