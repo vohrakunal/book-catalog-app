@@ -1,0 +1,38 @@
+.bat-card-book-img{
+    height: 8rem;
+    margin-top:1rem;
+    left: 0;
+}
+
+.bat-card-book-year{
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.bat-card-book-desc{
+    margin-top: 2rem;
+}
+
+.bat-card-book-desc > h5{
+    font-weight: 200;
+
+}
+.bat-card-book-desc > div{
+    font-style: italic;
+}
+
+.bat-card-book{
+    height: auto;
+    min-height: 70vh;
+    top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.bat-reviews-title{
+    font-weight: 200;
+}
+
+.bat-reviews{
+    margin-top: 2rem;
+}
