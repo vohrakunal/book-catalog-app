@@ -1,15 +1,11 @@
 import React from 'react'
 import BooksCard from '../../../components/BooksCard/BooksCard'
 
-import IBooks from '../../../interfaces/books'
+import { prop } from './RenderBooks.types';
 
 import "./RenderBooks.css";
 
-type BooksArrProps = {
-    books : IBooks[]
-}
-
-export default function RenderBooks(props: BooksArrProps) {
+export default function RenderBooks(props: prop) {
     function renderCard() {
         if (props.books.length > 0) {
             return (

@@ -4,15 +4,19 @@ import {toast} from 'react-toastify';
 import {getAllBooks} from "../../servcies/books.service";
 import RenderBooks from "./RenderBooks/RenderBooks";
 
+import Loader from '../../components/Loader/Loader';
+
 import { Container } from "react-bootstrap";
 
 const ViewBooks: React.FC = () =>{
 
 
     const [books, setBooks] = useState([]);
+    const [loader, setLoader] = useState(true);
 
     async function fetchBooks(){
         await getAllBooks().then(res=>{
+            setLoader(false);
             if(res.status===200){
                 setBooks(res.data);
             }
@@ -30,7 +34,7 @@ const ViewBooks: React.FC = () =>{
 
     return (
         <>
-
+            {loader? <Loader/> : 
             <Container>
                 <div className="p-4 h3 text-center text-primary font-weight-bolder">
                     Books Catalogue
@@ -39,7 +43,7 @@ const ViewBooks: React.FC = () =>{
                     <RenderBooks books={books}/>
                 </div>       
             </Container>
-
+        }
         </>
     )
 }
